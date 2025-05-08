@@ -13,22 +13,34 @@ st.set_page_config(
 # App title
 st.title("The Molecule Machine")
 
-# Sidebar (Navigation)
-with st.sidebar:
-    st.header("Modules")
-    selected_module = st.selectbox("Select a module:", ["Welcome", "Atomic Viewer", "Periodic Table", "Reaction Simulator", "Math Workbench", "Lessons"])
+# Sidebar (Navigation) - Now just a simplified version
+# with st.sidebar:
+#     st.header("Modules")
+#     selected_module = st.selectbox("Select a module:", ["Welcome", "Atomic Viewer", "Periodic Table", "Reaction Simulator", "Math Workbench", "Lessons"])
 
-# Main content area (Module display)
-if selected_module == "Welcome":
+
+# Tabbed Interface - New Implementation
+tab_names = ["Welcome", "Atomic Viewer", "Periodic Table", "Reaction Simulator", "Math Workbench", "Lessons"]
+tabs = st.tabs(tab_names)  # Creates the tabs
+
+# Main content area (Module display) - Now using tabs
+with tabs[0]:  # Welcome tab
     st.write(f"Welcome to {config.APP_NAME}!")
-    st.write("Select a module from the sidebar to get started.")
-elif selected_module == "Atomic Viewer":
+    st.write("Select a module from the tabs above to get started.")
+
+with tabs[1]:  # Atomic Viewer tab
     atomic_viewer.render()
-elif selected_module == "Periodic Table":
+    import components.molecule_renderer as mr
+    mr.render_3d_molecule(element="H")
+
+with tabs[2]:  # Periodic Table tab
     periodic_table.render()
-elif selected_module == "Reaction Simulator":
+
+with tabs[3]:  # Reaction Simulator tab
     reaction_simulator.render()
-elif selected_module == "Math Workbench":
+
+with tabs[4]:  # Math Workbench tab
     math_workbench.render()
-elif selected_module == "Lessons":
+
+with tabs[5]:  # Lessons tab
     lessons.render()

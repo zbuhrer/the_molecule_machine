@@ -28,8 +28,7 @@ def render_3d_molecule(element=None, xyz_coordinates=None, style="stick"):
         view.zoomTo()
         view.setStyle({style: {}})  # Apply the specified style
 
-    view.show()
-    st.markdown(view.js(), unsafe_allow_html=True)
+        st.markdown(view.js(), unsafe_allow_html=True)
 
 def display_orbitals(element):
     """
