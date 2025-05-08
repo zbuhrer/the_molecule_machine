@@ -10,30 +10,33 @@ The Molecule Machine is an interactive Streamlit application designed to explore
 
 ## Getting Started
 
-To run this application, you will need Python and Streamlit installed.  It is also recommended to use a virtual environment to manage dependencies.
+To run this application:
 
-1.  **Create and activate a virtual environment (venv):**
+1.  **Ensure you have Python and Streamlit installed.**
+
+2.  **Recommended: Create and activate a virtual environment (venv):**
 
     ```bash
     python -m venv .venv
     source .venv/bin/activate  # Linux/macOS
-    # or
     .venv\Scripts\activate   # Windows
     ```
 
-2.  **Install dependencies:**
+3.  **Install dependencies:**
 
     ```bash
-    pip install -r requirements
+    pip install -r requirements.txt
     ```
 
-3.  **Run the app:**
+4.  **Run the app:**
 
     ```bash
     streamlit run the_molecule_machine/app.py
     ```
 
     This will open the application in your web browser.
+
+![tmm.png](tmm.png)
 
 ## License
 
