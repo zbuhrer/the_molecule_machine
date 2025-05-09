@@ -32,21 +32,16 @@ with tabs[0]:  # Welcome tab
     logger.debug("Welcome tab displayed.")
 
 with tabs[1]:  # Atomic Viewer tab
-    logger.info("Atomic Viewer tab selected.")
     atomic_viewer.render()
 
 with tabs[2]:  # Periodic Table tab
-    logger.info("Periodic Table tab selected.")
     periodic_table.render()
 
 with tabs[3]:  # Reaction Simulator tab
-    logger.info("Reaction Simulator tab selected.")
     reaction_simulator.render()
 
 with tabs[4]:  # Math Workbench tab
-    logger.info("Math Workbench tab selected.")
     math_workbench.render()
 
 with tabs[5]:  # Lessons tab
-    logger.info("Lessons tab selected.")
     lessons.render()

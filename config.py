@@ -3,7 +3,7 @@
 APP_NAME = "The Molecule Machine"
 APP_ICON = "⚛️"
 DEFAULT_LAYOUT = "wide"
-INITIAL_SIDEBAR_STATE = "expanded"
+INITIAL_SIDEBAR_STATE = "collapsed"
 
 # Data paths
 DATA_DIR = "data"
